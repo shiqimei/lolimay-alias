@@ -1,5 +1,4 @@
 # lolimay-alias
-backup of lolimay's alias
 
 ````bash
 #以下是我的用户alias
