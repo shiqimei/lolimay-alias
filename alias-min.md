@@ -1,4 +1,3 @@
-````
 func_compile() { 
     if [ ! -d 'build' ]; then
         md build
@@ -42,4 +41,3 @@ alias temp='cd ~/Temp'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-````
