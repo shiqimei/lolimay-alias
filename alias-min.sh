@@ -1,3 +1,4 @@
+#以下是我的用户alias
 func_compile() { 
     if [ ! -d 'build' ]; then
         md build
@@ -11,9 +12,14 @@ func_compile() {
     echo -e '\r'
 }
 
+func_browserSync() {
+    browser-sync start --server --files "*.css, *.html"
+}
+
 alias cd='func() { cd $1; ls; }; func'
 alias cd..='cd ..'
 alias cdcode='cd /media/lolimay/Code'
+alias cdcpp='cd /media/lolimay/Code/CPP'
 alias cmake.='cmake . && make'
 alias code.='code ./'
 alias deepin='cd /media/lolimay/Code/Deepin'
@@ -38,6 +44,11 @@ alias doc='cd /media/lolimay/Code/Doc'
 alias algorithm='cd /media/lolimay/Code/Algorithm'
 alias run='func_compile'
 alias temp='cd ~/Temp'
+alias sa=func_browserSync
+alias template='cd /media/lolimay/Code/Web/Template'
+alias webinit='fun() { ~/Scripts/webinit.sh $1; cd $1; code .;}; fun'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export NODE_PATH="/home/lolimay/.nvm/versions/node/v10.8.0/lib/node_modules" #修复 Error: Cannot find module 'webpack/lib/node/NodeTemplatePlugin'
