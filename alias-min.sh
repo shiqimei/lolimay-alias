@@ -34,7 +34,6 @@ alias web='cd /media/lolimay/Code/Web'
 alias blog='cd /media/lolimay/Code/Blog'
 alias post='cd /media/lolimay/Code/Blog/source/_posts'
 alias cls='clear'
-alias scripts='cd ~/Scripts'
 alias ddg='cd /media/lolimay/Code/Doc/deepin-develop-guide'
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
@@ -47,6 +46,7 @@ alias temp='cd ~/Temp'
 alias sa=func_browserSync
 alias template='cd /media/lolimay/Code/Web/Template'
 alias webinit='fun() { ~/Scripts/webinit.sh $1; cd $1; code .;}; fun'
+alias ans='cd ~/OpenVPN && bash ./connect.sh > /dev/null &'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
