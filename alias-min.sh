@@ -15,6 +15,9 @@ func_compile() {
 func_browserSync() {
     browser-sync start --server --files "*.css, *.html"
 }
+func_port() {
+    lsof -i :$1
+}
 
 alias cd='func() { cd $1; ls; }; func'
 alias cd..='cd ..'
@@ -46,7 +49,8 @@ alias temp='cd ~/Temp'
 alias sa=func_browserSync
 alias template='cd /media/lolimay/Code/Web/Template'
 alias webinit='fun() { ~/Scripts/webinit.sh $1; cd $1; code .;}; fun'
-alias ans='cd ~/OpenVPN && bash ./connect.sh > /dev/null &'
+alias ap='cd ~/OpenVPN && bash ./connect.sh > /dev/null &'
+alias port=func_port
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
