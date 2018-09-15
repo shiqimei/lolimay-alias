@@ -30,11 +30,11 @@ alias ealias='code ~/.bashrc'
 alias ualias='source ~/.bashrc'
 alias l='ls -CF'
 alias la='ls -A'
-alias ls='ls --color=auto'
+alias ls='ls --color'
 alias md='mkdir'
 alias re='mv'
 alias web='cd /media/lolimay/Code/Web'
-alias blog='cd /media/lolimay/Code/Blog'
+alias blog='cd /media/lolimay/Code/Blog/public'
 alias post='cd /media/lolimay/Code/Blog/source/_posts'
 alias cls='clear'
 alias ddg='cd /media/lolimay/Code/Doc/deepin-develop-guide'
@@ -51,6 +51,7 @@ alias template='cd /media/lolimay/Code/Web/Template'
 alias webinit='fun() { ~/Scripts/webinit.sh $1; cd $1; code .;}; fun'
 alias ap='cd ~/OpenVPN && bash ./connect.sh > /dev/null &'
 alias port=func_port
+alias txt='cd /media/lolimay/Code/Text'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
