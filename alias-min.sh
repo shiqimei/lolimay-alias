@@ -18,6 +18,17 @@ func_browserSync() {
 func_port() {
     lsof -i :$1
 }
+func_blog() {
+    if [ ! -n "$1" ] ;then
+        echo "请指定本次提交的内容";
+    else
+        cd /media/lolimay/Code/Blog/public
+        hexo g
+        git add -A
+        git commit -m "$1"
+        git push
+    fi
+}
 
 alias cd='func() { cd $1; ls; }; func'
 alias cd..='cd ..'
@@ -34,7 +45,7 @@ alias ls='ls --color'
 alias md='mkdir'
 alias re='mv'
 alias web='cd /media/lolimay/Code/Web'
-alias blog='cd /media/lolimay/Code/Blog/public'
+alias blog=func_blog
 alias post='cd /media/lolimay/Code/Blog/source/_posts'
 alias cls='clear'
 alias ddg='cd /media/lolimay/Code/Doc/deepin-develop-guide'
