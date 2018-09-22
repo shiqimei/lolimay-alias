@@ -68,3 +68,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export NODE_PATH="/home/lolimay/.nvm/versions/node/v10.8.0/lib/node_modules" #修复 Error: Cannot find module 'webpack/lib/node/NodeTemplatePlugin'
+
+# 以下是自定义环境变量
+export PATH="/media/lolimay/Code/Deepin/BaiduPCS:$PATH"
